@@ -1,0 +1,15 @@
+{
+    "display_name": "Print as Flashcards",
+    "module_name": "print_as_flashcards",
+    "repo_name": "print-as-flashcards",
+    "ankiweb_id": "556159936",
+    "author": "zjosua",
+    "contact": "https://github.com/zjosua",
+    "homepage": "https://github.com/zjosua/print-as-flashcards",
+    "copyright_start": 2019,
+    "tags": "print flashcards",
+    "conflicts": [],
+    "targets": [
+        "anki21"
+    ]
+}
