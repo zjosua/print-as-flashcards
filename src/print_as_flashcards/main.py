@@ -108,7 +108,7 @@ tr    {{ height: {height:.0f}%; }}
     buf.write("</body></html>")
     mw.progress.finish()
     buf.close()
-    tooltip(_("Loading..."), period=1000)
+    tooltip("Creating printable flashcards...", period=3000)
     QDesktopServices.openUrl(QUrl.fromUserInput(prefixed_path(path)))
 
 def addShortcut(browser):
