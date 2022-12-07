@@ -111,12 +111,6 @@ tr    {{ height: {height:.0f}%; }}
     tooltip(_("Loading..."), period=1000)
     QDesktopServices.openUrl(QUrl.fromUserInput(prefixed_path(path)))
 
-q = QAction(mw)
-q.setText("Make Flashcards")
-q.setShortcut(QKeySequence("Ctrl+M"))
-mw.form.menuTools.addAction(q)
-q.triggered.connect(onPrint)
-
 def addShortcut(browser):
     a = QAction("&Make Flashcards", browser)
     a.setShortcut(QKeySequence("Ctrl+M"))
