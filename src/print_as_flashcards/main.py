@@ -75,7 +75,7 @@ tr    {{ height: {height:.0f}%; }}
     processed_notes = []
     mw.progress.start(immediate=True)
     for j, cid in enumerate(ids):
-        c = mw.col.getCard(cid)
+        c = mw.col.get_card(cid)
         if c.note().id not in processed_notes:
             q = esc(c.question())
             a = esc(c.answer())
