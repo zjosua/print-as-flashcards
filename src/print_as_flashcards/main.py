@@ -14,7 +14,7 @@ License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
 
 import re, urllib
 from aqt.qt import *
-from anki.utils import isWin
+from anki.utils import is_win
 from anki.hooks import runHook, addHook
 from aqt.utils import openLink, tooltip
 from aqt import mw
@@ -47,7 +47,7 @@ def onPrint(cids=None):
         s = re.sub("\[\[type:[^]]+\]\]", "", s)
         return s
     def prefixed_path(path):
-        if isWin:
+        if is_win:
             prefix = "file:///"
         else:
             prefix = "file://"
