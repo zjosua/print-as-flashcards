@@ -77,8 +77,8 @@ tr    {{ height: {height:.0f}%; }}
     for j, cid in enumerate(ids):
         c = mw.col.getCard(cid)
         if c.note().id not in processed_notes:
-            q = esc(c._getQA(True, False)['a']).split('<hr id=answer>')[0]
-            a = esc(c._getQA(True, False)['a']).split('<hr id=answer>')[1]
+            q = esc(c.question())
+            a = esc(c.answer())
             que.append(q)
             ans.append(a)
             processed_notes.append(c.note().id)
