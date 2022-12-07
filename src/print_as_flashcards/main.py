@@ -40,12 +40,6 @@ def onPrint(cids=None):
         ids = cids
     else:
         ids = sortFieldOrderCids(mw.col.decks.selected())
-    def esc(s):
-        # strip off the repeated question in answer if exists
-        #s = re.sub("(?si)^.*<hr id=answer>\n*", "", s)
-        # remove type answer
-        s = re.sub("\[\[type:[^]]+\]\]", "", s)
-        return s
     def prefixed_path(path):
         if is_win:
             prefix = "file:///"
@@ -77,8 +71,8 @@ tr    {{ height: {height:.0f}%; }}
     for j, cid in enumerate(ids):
         c = mw.col.get_card(cid)
         if c.note().id not in processed_notes:
-            q = esc(c.question())
-            a = esc(c.answer())
+            q = c.question()
+            a = c.answer()
             que.append(q)
             ans.append(a)
             processed_notes.append(c.note().id)
