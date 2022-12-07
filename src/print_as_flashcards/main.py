@@ -78,7 +78,7 @@ tr    {{ height: {height:.0f}%; }}
             processed_notes.append(c.note().id)
     
     if (len(que) % CARDS_PER_TABLE != 0):
-        for i in range(len(que) % CARDS_PER_TABLE):
+        for i in range(CARDS_PER_TABLE - len(que) % CARDS_PER_TABLE):
             que.append("")
             ans.append("")
     
